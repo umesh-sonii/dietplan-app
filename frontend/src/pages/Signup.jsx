@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [name, setName] = useState(""); // New name state
+  const [name, setName] = useState(""); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, {
-        name, // Send name too
+        name, 
         email,
         password,
       });
